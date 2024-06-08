@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İntProgOdev</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/İntProgOdev.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="https://cdn.discordapp.com/attachments/1196485692163895296/1248972284148973679/pngtree-mv-vm-letter-vector-logo-image_332121.jpg?ex=66659b95&is=66644a15&hm=b1023fa203ef200fdcdb8a70349dbd806ca28bc0558ec28c7055c25ac6d78e93" alt="Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                    Mustafa Melih Durmuşoğlu
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-action="Index" asp-controller="Student">Öğrenci İşlemleri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-action="Index" asp-controller="Ders">Ders İşlemleri</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - İnternet Programcılığı -
+            <a href="https://github.com/mellunkolik" target="_blank">
+                <img src="https://cdn.discordapp.com/attachments/1196485692163895296/1248970782420373517/kisspng-github-computer-icons-github-logo-5b459a3d238b60.4061479515312881251456.jpg?ex=66659a2f&is=666448af&hm=044827f3799e74077cc7bdafcc377e19c40855212ceab5a6ee8becbea8ddd54f" alt="GitHub" style="width: 20px; height: 20px;">
+                GitHub
+            </a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
